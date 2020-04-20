@@ -1,4 +1,5 @@
 const { UserModel } =require('../models/index')
+const { generateHashedPassword } = require('../utils/Hash')
 
 class UserController {
     async index (req, res) {
@@ -10,12 +11,11 @@ class UserController {
     async store (req, res) {
         try {
             const { name, email, password } = req.body
-            console.log(req.body)
             
             const user = await UserModel.create({
                 name,
                 email,
-                password
+                password: await generateHashedPassword(password)
             })
     
             return res.status(200).json(user)
