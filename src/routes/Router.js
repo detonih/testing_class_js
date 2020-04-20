@@ -1,5 +1,5 @@
 const express = require('express')
-const User = require('./User')
+const userRoutes = require('./User')
 
 class Router {
     constructor() {
@@ -7,7 +7,7 @@ class Router {
         this.router.get('/', (req, res) => {
             res.send('Index page')
         })
-        this.router.use('/users', User.router)
+        this.router.use('/users', userRoutes.router)
     }
 }
 

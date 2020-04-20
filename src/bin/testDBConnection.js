@@ -1,6 +1,6 @@
-const sequelize = require('../models/index')
+const Database = require('../models/index')
 
-sequelize
+Database
   .connection
   .authenticate()
   .then(() => {

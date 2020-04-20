@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/bin/server.js"
+    "start": "node ./src/bin/server.js",
+    "testDB": "node ./src/bin/testDBConnection.js",
+    "syncDB": "node ./src/bin/syncDB.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.6"
   }
 }
