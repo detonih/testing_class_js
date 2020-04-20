@@ -1,5 +1,4 @@
-const User = require('../models/User')
-const {UserModel} =require('../models/index')
+const { UserModel } =require('../models/index')
 
 class UserController {
     async index (req, res) {
