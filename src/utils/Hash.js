@@ -18,4 +18,4 @@ class Hash {
       }
 }
 
-module.exports = new Hash
+module.exports = new Hash()
